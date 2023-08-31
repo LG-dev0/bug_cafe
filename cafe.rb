@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 DRINKS = [
   { name: 'コーヒー', price: '300' },
   { name: 'カフェラテ', price: '400' },
@@ -14,8 +15,8 @@ FOODS = [
 ].freeze
 
 def take_order(menus)
-  menus.each.with_index(0) do |menu, i|
-    puts "(#{i+1})#{menu[:name]}: #{menu[:price]}円"
+  menus.each.with_index(1) do |menu, i|
+    puts "(#{i})#{menu[:name]}: #{menu[:price]}円"
   end
   print '>'
   order_number = gets.to_i - 1
